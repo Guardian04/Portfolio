@@ -1,20 +1,21 @@
 import { useState } from 'react';
 import './MyProfile.css';
+import Contact from './Contact';
 
 interface status {
     status: boolean;
     message: string;
-}
+};
 
 const availableStatus : status = {
     status: true,
     message: 'available'
-}
+};
 
 const unavailableStatus : status = {
     status: false,
     message: 'unavailable'
-}
+};
 
 const possibleStatus = [availableStatus, unavailableStatus];
 
@@ -41,6 +42,9 @@ export default function MyProfile() {
                 </div>
                 <span className="profile-name">Claudio Reibaud</span>
                 <span className="profile-title">Cybersecurity Student</span>
+            </div>
+            <div className="profile-description">
+                <Contact />
             </div>
         </div>
     );
