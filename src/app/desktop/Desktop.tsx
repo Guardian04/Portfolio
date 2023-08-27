@@ -1,5 +1,5 @@
 import "./Desktop.css";
-import ProfileBar from "../components/ProfileBar";
+import ProfileBar from "./components/profile/ProfileBar";
 
 export default function Desktop() {
     return (

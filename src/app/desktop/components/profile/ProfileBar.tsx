@@ -1,9 +1,10 @@
 import './ProfileBar.css';
+import ProfileHead from './ProfileHead';
 
 export default function ProfileBar() {
     return (
         <div className={`profile`}>
-            hello world
+            <ProfileHead />
         </div>
     );
 };
