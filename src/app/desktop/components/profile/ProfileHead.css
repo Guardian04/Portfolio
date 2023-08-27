@@ -1,0 +1,8 @@
+.profile-head {
+    position: fixed;
+    width: 290px;
+    height: 235px;
+    background-color: #142b3a;
+    border-radius: 10px 10px 0 0;
+    box-shadow: 0 4px 8px rgba(13, 28, 39, 0.5);
+}
