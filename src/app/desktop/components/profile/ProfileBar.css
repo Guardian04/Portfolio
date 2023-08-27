@@ -1,9 +1,8 @@
 .profile {
-    position: absolute;
+    position: relative;
     width: 290px;
-    height: calc(100% - 30px);
-    background-color: #122735;
+    height: 100%;
+    background-color: #132938;
     border-radius: 10px;
     box-shadow: 4px 0 8px rgba(16, 34, 46, 0.5);
-    overflow: hidden;
 }
