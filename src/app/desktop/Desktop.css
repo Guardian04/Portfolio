@@ -15,4 +15,6 @@
     border-radius: 10px;
     box-shadow: 4px 6px 8px rgba(0, 0, 0, 0.5);
     overflow: hidden;
+    display: flex;
+    justify-content: space-between;
 }

@@ -3,7 +3,5 @@
     width: 290px;
     height: 60px;
     background-color: #163041;
-    border-radius: 0 0 10px 10px;
     box-shadow: 0 -2px 8px rgba(16, 34, 46, 0.5);
-    z-index: 999;
 }

@@ -1,8 +1,10 @@
 .profile {
-    position: relative;
+    position: fixed;
     width: 290px;
-    height: 100%;
+    height: calc(100% - 30px);
     background-color: #132938;
-    border-radius: 10px;
+    border-radius: 10px 0 0 10px;
     box-shadow: 4px 0 8px rgba(16, 34, 46, 0.5);
+    overflow: hidden;
+    z-index: 1;
 }
