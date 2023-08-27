@@ -1,10 +1,9 @@
-import './App.css';
-import MyProfile from './components/MyProfile';
+import Desktop from "./app/Desktop";
 
 export default function App() {
     return (
-        <div id="app">
-            <MyProfile />
-        </div>
+        <>
+            <Desktop />
+        </>
     );
 };

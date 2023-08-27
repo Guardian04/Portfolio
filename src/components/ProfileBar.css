@@ -1,0 +1,8 @@
+.profile {
+    position: absolute;
+    width: 290px;
+    height: calc(100% - 30px);
+    background-color: red;
+    border-radius: 10px;
+    overflow: hidden;
+}
