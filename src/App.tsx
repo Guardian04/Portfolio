@@ -1,4 +1,4 @@
-import Desktop from "./app/Desktop";
+import Desktop from "./app/desktop/Desktop";
 
 export default function App() {
     return (
