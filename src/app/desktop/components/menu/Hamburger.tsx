@@ -1,13 +1,13 @@
 import "./Hamburger.css";
 
 interface Props {
-    onMouseDown: () => void;
+    onMouseDownHamburger: () => void;
 };
 
-export default function Hamburger({ onMouseDown }: Props) {
+export default function Hamburger({ onMouseDownHamburger }: Props) {
     return (
         <div className="hamburger">
-            <div className="hamburger-inner" onMouseDown={onMouseDown}>
+            <div className="hamburger-inner" onMouseDown={onMouseDownHamburger}>
                 <span></span>
                 <span></span>
                 <span></span>

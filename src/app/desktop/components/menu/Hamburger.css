@@ -3,6 +3,7 @@
     height: 70px;
     background-color: #163041;
     box-shadow: 0 4px 8px rgba(16, 34, 46, 0.5);
+    z-index: 999;
 }
 
 .hamburger-inner {
@@ -22,8 +23,14 @@
     height: 4px;
     background-color: white;
     border-radius: 2px;
-    transition: width 0.5s ease-in-out, transform 0.5s ease-in-out;
+    transition: background-color 0.5s ease-in-out, width 0.5s ease-in-out, transform 0.5s ease-in-out, filter 0.5s ease-in-out;
     cursor: pointer;
+    filter: brightness(75%);
+}
+
+.hamburger-inner:hover span {
+    background-color: #FFA500;
+    filter: brightness(100%);
 }
 
 .hamburger-inner:hover span:nth-child(1) {
@@ -44,6 +51,11 @@
 .menu.active .hamburger-inner span:nth-child(3) {
     width: 75%;
     transform: translate(7px, -2px) rotate(-45deg);
+}
+
+.menu.active .hamburger-inner:hover span {
+    background-color: #D84B4B;
+    filter: brightness(100%);
 }
 
 .menu.active .hamburger-inner:hover span:nth-child(1) {

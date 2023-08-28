@@ -1,5 +1,4 @@
 .profile-body {
-    position: relative;
     width: 100%;
     height: calc(100% - 235px - 60px);
     overflow-x: hidden;
