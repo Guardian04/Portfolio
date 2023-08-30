@@ -10,19 +10,18 @@ export default function MenuContent({ openMenu, onMouseDownMenu, selectedMenu } 
     const menuElements = ["Home", "History", "Portfolio", "Blog", "Contact"];
     return (
         <div className={`menu-content ${openMenu ? "active" : ""}`}>
-            {openMenu ? 
-                <div className="menu-items">
-                    {menuElements.map((element, index) => {
-                        return (
-                            <div className={`menu-item ${element === selectedMenu ? "active" : ""}`} key={index} onClick={() => onMouseDownMenu(element)}>
-                                <div className="menu-item-inner">
-                                    <h3>{element.toUpperCase()}</h3>
-                                </div>
+            <div className={`menu-items-selected ${openMenu ? "active" : ""}`}>{selectedMenu.toUpperCase()}</div>
+            <div className="menu-items">
+                {menuElements.map((element, index) => {
+                    return (
+                        <div key={index}className={`menu-item ${element === selectedMenu ? "active" : ""}`} onClick={() => onMouseDownMenu(element)} style={{transitionDelay: `${0.1 * index}s`}}>
+                            <div className="menu-item-inner">
+                                <h3>{element.toUpperCase()}</h3>
                             </div>
-                        );
-                    })}
-                </div> : <div className="menu-items-selected">{selectedMenu.toUpperCase()}</div>
-            }
+                        </div>
+                    );
+                })}
+            </div>
         </div>
     );
 };
