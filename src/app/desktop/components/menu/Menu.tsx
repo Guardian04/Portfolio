@@ -17,7 +17,7 @@ export default function Menu({ openMenu, onClickHamburger, selectedMenu, onClick
         <div className={`menu ${openMenu ? "active" : ""}`}>
             <Hamburger onClickHamburger={onClickHamburger} />
             <MenuContent openMenu={openMenu} onClickMenu={onClickMenu} selectedMenu={selectedMenu} />
-            <MenuFooter currentLanguage={currentLanguage} onClickLang={onClickLang} />
+            <MenuFooter openMenu={openMenu} onClickHamburger={onClickHamburger} currentLanguage={currentLanguage} onClickLang={onClickLang} />
         </div>
     );
 };
