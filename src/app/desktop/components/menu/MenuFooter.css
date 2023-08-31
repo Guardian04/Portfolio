@@ -8,6 +8,70 @@
     align-items: center;
 }
 
+.btn-more-lang {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    filter: brightness(75%);
+    cursor: pointer;
+    transition: filter 0.5s ease-in-out;
+}
+
+.btn-more-lang.sub {
+    filter: brightness(100%);
+}
+
+.btn-more-lang:hover {
+    filter: brightness(100%);
+}
+
+.btn-more-lang span {
+    position: absolute;
+    width: 10px;
+    height: 2px;
+    border-radius: 2px;
+    background-color: white;
+    cursor: pointer;
+    transition: background-color 0.5s ease-in-out, transform 0.5s ease-in-out;
+}
+
+.btn-more-lang.sub span {
+    background-color: #FFA500;
+}
+
+.btn-more-lang span:nth-child(2) {
+    transform: rotate(90deg);
+}
+
+.btn-more-lang:hover span:nth-child(1) {
+    transform: rotate(-90deg);
+}
+
+.btn-more-lang:hover span:nth-child(2) {
+    transform: rotate(0deg);
+}
+
+.btn-more-lang.sub span:nth-child(2) {
+    transform: rotate(0deg);
+}
+
+.btn-more-lang.sub:hover span{
+    background-color: #ff5d5d;
+}
+
+.btn-more-lang.sub:hover span:nth-child(1) {
+    transform: rotate(45deg);
+}
+
+.btn-more-lang.sub:hover span:nth-child(2) {
+    transform: rotate(135deg);
+}
+
 .menu-footer-container {
     position: absolute;
     top: 25px;
@@ -20,19 +84,65 @@
 }
 
 .menu-footer-lang {
+    position: relative;
     width: 30px;
     height: 30px;
-    background: #132938;
+    background-color: #132938;
     border-radius: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
     cursor: pointer;
     transition: background-color 0.5s ease-in-out;
+    overflow: hidden;
+}
+
+.menu-footer-lang::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background-image: url("images/flags/en.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    filter: brightness(50%);
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.menu-footer-lang.fr::before {
+    background-image: url("images/flags/fr.png");
+    background-size: 30px 30px;
+}
+
+.menu-footer-lang.it::before {
+    background-image: url("images/flags/it.png");
+    background-size: 30px 30px;
+}
+
+.menu-footer-lang.cn::before {
+    background-image: url("images/flags/cn.png");
+    background-position: left;
+}
+
+.menu-footer-lang.es::before {
+    background-image: url("images/flags/es.png");
+}
+
+.menu-footer-lang:hover::before {
+    opacity: 1;
 }
 
 .menu-footer-lang.selected {
     background: #FFA500;
+}
+
+.menu-footer-lang.selected:hover::before {
+    opacity: 0;
 }
 
 .menu-footer-lang span {
