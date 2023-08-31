@@ -4,7 +4,12 @@ import ProfileBar from "./components/profile/ProfileBar";
 import Home from "./components/content/home/Home";
 import Menu from "./components/menu/Menu";
 
-export default function Desktop() {
+interface Props {
+    currentLanguage: string;
+    onClickLang: (lang : string) => void;
+};
+
+export default function Desktop({ currentLanguage, onClickLang }: Props) {
     const [openMenu, setOpenMenu] = useState(false);
     const [selectedMenu, setSelectedMenu] = useState("Home");
 
@@ -22,7 +27,7 @@ export default function Desktop() {
             <div className="app-container">
                 <ProfileBar />
                 <Home openMenu={openMenu} />
-                <Menu onMouseDownHamburger={handleClickHamburger} openMenu={openMenu} onMouseDownMenu={handleSelectMenu} selectedMenu={selectedMenu} />
+                <Menu onClickHamburger={handleClickHamburger} openMenu={openMenu} onClickMenu={handleSelectMenu} selectedMenu={selectedMenu} currentLanguage={currentLanguage} onClickLang={onClickLang} />
             </div>
         </div>
     );

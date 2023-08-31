@@ -1,20 +1,23 @@
 import "./Menu.css";
 import Hamburger from "./Hamburger";
 import MenuContent from "./MenuContent";
+import MenuFooter from "./MenuFooter";
 
 interface Props {
-    onMouseDownHamburger: () => void;
     openMenu: boolean;
-    onMouseDownMenu: (menu : string) => void;
+    onClickHamburger: () => void;
     selectedMenu: string;
+    onClickMenu: (menu : string) => void;
+    currentLanguage: string;
+    onClickLang: (lang : string) => void;
 };
 
-export default function Menu({ onMouseDownHamburger, openMenu, onMouseDownMenu, selectedMenu }: Props) {
+export default function Menu({ openMenu, onClickHamburger, selectedMenu, onClickMenu, currentLanguage, onClickLang}: Props) {
     return (
         <div className={`menu ${openMenu ? "active" : ""}`}>
-            <Hamburger onMouseDownHamburger={onMouseDownHamburger} />
-            <MenuContent openMenu={openMenu} onMouseDownMenu={onMouseDownMenu} selectedMenu={selectedMenu} />
-            <div className="footer"></div>
+            <Hamburger onClickHamburger={onClickHamburger} />
+            <MenuContent openMenu={openMenu} onClickMenu={onClickMenu} selectedMenu={selectedMenu} />
+            <MenuFooter currentLanguage={currentLanguage} onClickLang={onClickLang} />
         </div>
     );
 };

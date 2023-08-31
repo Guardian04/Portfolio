@@ -46,7 +46,7 @@
 }
 
 .menu-item-inner h3::before {
-    content: '';
+    content: "";
     position: absolute;
     bottom: -3px;
     left: 0;

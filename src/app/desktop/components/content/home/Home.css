@@ -4,11 +4,11 @@
     left: 290px;
     width: calc(100% - 290px - 70px);
     height: 100%;
-    transition: filter 0.5s ease-in-out, transform 0.5s ease-in-out;
+    transition: filter 1s ease-in-out, transform 1s ease-in-out;
 }
 
 .home.active {
-    transform: translateX(-160px);
+    transform: translateX(-140px);
     filter: brightness(50%);
 }
 

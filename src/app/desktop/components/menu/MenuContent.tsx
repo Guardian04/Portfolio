@@ -2,11 +2,11 @@ import "./MenuContent.css";
 
 interface Props {
     openMenu: boolean;
-    onMouseDownMenu: (menu : string) => void;
+    onClickMenu: (menu : string) => void;
     selectedMenu: string;
 };
 
-export default function MenuContent({ openMenu, onMouseDownMenu, selectedMenu } : Props) {
+export default function MenuContent({ openMenu, onClickMenu, selectedMenu } : Props) {
     const menuElements = ["Home", "History", "Portfolio", "Blog", "Contact"];
     return (
         <div className={`menu-content ${openMenu ? "active" : ""}`}>
@@ -14,7 +14,7 @@ export default function MenuContent({ openMenu, onMouseDownMenu, selectedMenu } 
             <div className="menu-items">
                 {menuElements.map((element, index) => {
                     return (
-                        <div key={index}className={`menu-item ${element === selectedMenu ? "active" : ""}`} onClick={() => onMouseDownMenu(element)} style={{transitionDelay: `${0.1 * index}s`}}>
+                        <div key={index}className={`menu-item ${element === selectedMenu ? "active" : ""}`} onClick={() => onClickMenu(element)} style={{transitionDelay: `${0.1 * index}s`}}>
                             <div className="menu-item-inner">
                                 <h3>{element.toUpperCase()}</h3>
                             </div>
