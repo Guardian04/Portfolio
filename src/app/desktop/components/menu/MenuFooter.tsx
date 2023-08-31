@@ -6,7 +6,7 @@ interface Props {
     onClickHamburger: () => void;
     currentLanguage: string;
     onClickLang: (lang: string) => void;
-}
+};
 
 export default function MenuFooter({ openMenu, onClickHamburger, currentLanguage, onClickLang, }: Props) {
     const languagesDispositionChanges = () => {

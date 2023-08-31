@@ -7,11 +7,12 @@ import Menu from "./components/menu/Menu";
 interface Props {
     currentLanguage: string;
     onClickLang: (lang : string) => void;
+    selectedMenu: string;
+    setSelectedMenu: (selectedMenu : string) => void;
 };
 
-export default function Desktop({ currentLanguage, onClickLang }: Props) {
+export default function Desktop({ currentLanguage, onClickLang, selectedMenu, setSelectedMenu }: Props) {
     const [openMenu, setOpenMenu] = useState(false);
-    const [selectedMenu, setSelectedMenu] = useState("Home");
 
     const handleClickHamburger = () => {
         setOpenMenu(!openMenu);

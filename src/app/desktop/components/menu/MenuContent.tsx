@@ -1,3 +1,4 @@
+import { useTranslation } from 'react-i18next';
 import "./MenuContent.css";
 
 interface Props {
@@ -7,7 +8,10 @@ interface Props {
 };
 
 export default function MenuContent({ openMenu, onClickMenu, selectedMenu } : Props) {
-    const menuElements = ["Home", "History", "Portfolio", "Blog", "Contact"];
+    const { t } = useTranslation();
+    const menuItems = ['home', 'about', 'portfolio', 'hobbies', 'contact'];
+    const menuElements = menuItems.map(item => t(`menu.${item}`));
+    
     return (
         <div className={`menu-content ${openMenu ? "active" : ""}`}>
             <div className={`menu-items-selected ${openMenu ? "active" : ""}`}>{selectedMenu.toUpperCase()}</div>

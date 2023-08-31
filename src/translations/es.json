@@ -1,0 +1,9 @@
+{
+    "menu": {
+        "home": "Casa",
+        "about": "Sobre",
+        "portfolio": "Portafolio",
+        "hobbies": "Aficiones",
+        "contact": "Contacto"
+    }
+}

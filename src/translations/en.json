@@ -1,3 +1,9 @@
 {
-    
+    "menu": {
+        "home": "Home",
+        "about": "About",
+        "portfolio": "Portfolio",
+        "hobbies": "Hobbies",
+        "contact": "Contact"
+    }
 }
