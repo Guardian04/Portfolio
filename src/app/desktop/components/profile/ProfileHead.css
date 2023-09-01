@@ -3,4 +3,62 @@
     height: 235px;
     background-color: #163041;
     box-shadow: 0 4px 8px rgba(13, 28, 39, 0.5);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.profile-head-img {
+    width: 130px;
+    height: 130px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.profile-head-img img {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+}
+
+.profile-head-img span {
+    position: absolute;
+    border: 2px solid #FFA500;
+    border-radius: 50%;
+}
+
+.profile-head-img #first {
+    width: 104px;
+    height: 104px;
+    border-top-color: transparent;
+    border-bottom-color: transparent;
+    animation: borderSpin 4s linear infinite;
+}
+
+.profile-head-img #second {
+    width: 117px;
+    height: 114px;
+    border-left-color: transparent;
+    border-right-color: transparent;
+    animation: borderSpin 6s linear reverse infinite;
+}
+
+.profile-head-img #third {
+    width: 130px;
+    height: 130px;
+    border-top-color: transparent;
+    border-bottom-color: transparent;
+    animation: borderSpin 8s linear infinite;
+}
+
+@keyframes borderSpin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
 }
