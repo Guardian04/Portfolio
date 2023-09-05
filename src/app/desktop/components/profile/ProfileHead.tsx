@@ -9,6 +9,12 @@ export default function ProfileHead() {
                 <span id="second"></span>
                 <span id="third"></span>
             </div>
+            <div className="profile-name">
+                <h2>Claudio Reibaud</h2>
+            </div>
+            <div className="profile-job">
+                <h3>Cybersecurity Student</h3>
+            </div>
         </div>
     );
 };
