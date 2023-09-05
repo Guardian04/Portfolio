@@ -9,7 +9,7 @@ export default function ProfileFooter() {
     ];
 
     const itemsLinks = [
-        "www.linkedin.com/in/claudio-reibaud-02388628b",
+        "https://www.linkedin.com/in/claudio-reibaud-02388628b/",
         "https://github.com/Guardian04/Portfolio.git",
         "https://twitter.com/home?lang=fr",
         "https://stackoverflow.com/"
