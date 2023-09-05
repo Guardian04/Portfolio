@@ -13,7 +13,8 @@ export default function ProfileFooter() {
         "https://github.com/Guardian04/Portfolio.git",
         "https://twitter.com/home?lang=fr",
         "https://stackoverflow.com/"
-    ]
+    ];
+    
     return (
         <div className="profile-footer">
             <div className="profile-footer-container">
