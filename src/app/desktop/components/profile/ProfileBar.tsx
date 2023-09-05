@@ -3,10 +3,14 @@ import ProfileHead from './ProfileHead';
 import ProfileBody from './ProfileBody';
 import ProfileFooter from './ProfileFooter';
 
-export default function ProfileBar() {
+interface Props {
+    setSelectedMenu: (selectedMenu : string) => void;
+};
+
+export default function ProfileBar({ setSelectedMenu } : Props) {
     return (
         <div className={`profile`}>
-            <ProfileHead />
+            <ProfileHead onClick={setSelectedMenu} />
             <ProfileBody />
             <ProfileFooter />
         </div>

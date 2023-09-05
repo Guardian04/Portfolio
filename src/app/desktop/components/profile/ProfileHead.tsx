@@ -1,6 +1,10 @@
 import "./ProfileHead.css"
 
-export default function ProfileHead() {
+interface Props {
+    onClick: (selectedMenu : string) => void;
+};
+
+export default function ProfileHead({ onClick } : Props) {
     return (
         <div className="profile-head">
             <div className="profile-head-img">
@@ -9,7 +13,7 @@ export default function ProfileHead() {
                 <span id="second"></span>
                 <span id="third"></span>
             </div>
-            <div className="profile-name">
+            <div className="profile-name" onClick={() => onClick("Home")}>
                 <h2>Claudio Reibaud</h2>
             </div>
             <div className="profile-job">

@@ -26,7 +26,7 @@ export default function Desktop({ currentLanguage, onClickLang, selectedMenu, se
     return (
         <div className="app">
             <div className="app-container">
-                <ProfileBar />
+                <ProfileBar setSelectedMenu={setSelectedMenu} />
                 <Home openMenu={openMenu} />
                 <Menu onClickHamburger={handleClickHamburger} openMenu={openMenu} onClickMenu={handleSelectMenu} selectedMenu={selectedMenu} currentLanguage={currentLanguage} onClickLang={onClickLang} />
             </div>
