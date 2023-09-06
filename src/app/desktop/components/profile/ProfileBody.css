@@ -39,3 +39,30 @@
     font-weight: 300;
     filter: brightness(75%);
 }
+
+.profile-body-speak {
+    margin-top: 20px;
+    padding: 20px 0;
+    border: 2px solid #1a3648;
+    border-radius: 3px;
+    border-left-color: transparent;
+    border-right-color: transparent;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.profile-body-speak-item {
+    width: 70px;
+    height: 90px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 5px;
+}
+
+.profile-body-speak-item span{
+    font-size: 0.85rem;
+}
