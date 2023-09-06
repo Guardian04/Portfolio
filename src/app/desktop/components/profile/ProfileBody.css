@@ -8,3 +8,34 @@
 .profile-body::-webkit-scrollbar {
     display: none;
 }
+
+.profile-body-content {
+    width: 100%;
+    padding: 20px 30px;
+}
+
+.profile-body-about {
+    height: 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.profile-body-about-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.profile-body-about-item span {
+    font-size: 0.8rem;
+}
+
+.profile-body-about-item span:nth-child(1) {
+    font-weight: 400;
+}
+
+.profile-body-about-item span:nth-child(2) {
+    font-weight: 300;
+    filter: brightness(75%);
+}

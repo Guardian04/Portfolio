@@ -5,5 +5,12 @@
         "portfolio": "Portafolio",
         "hobbies": "Aficiones",
         "contact": "Contacto"
+    },
+    "speakLangs": {
+        "fr": "Francés",
+        "it": "Italiano",
+        "en": "Inglés",
+        "es": "Español",
+        "cn": "Chino"
     }
 }

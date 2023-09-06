@@ -9,7 +9,14 @@ export default function App() {
     const [selectedMenu, setSelectedMenu] = useState(t("menu.home"));
 
     const changeLang = (language : string) => {
-        const menuItems = ["home", "about", "portfolio", "hobbies", "contact"];
+        const menuItems = [
+            "home", 
+            "about", 
+            "portfolio", 
+            "hobbies", 
+            "contact"
+        ];
+        
         const menuElements = menuItems.map(item => t(`menu.${item}`));
         const index = menuElements.indexOf(selectedMenu);
         i18n.changeLanguage(language);
@@ -19,7 +26,12 @@ export default function App() {
 
     return (
         <>
-            <Desktop currentLanguage={currentLanguage} onClickLang={changeLang} selectedMenu={selectedMenu} setSelectedMenu={setSelectedMenu} />
+            <Desktop 
+                currentLanguage={currentLanguage} 
+                onClickLang={changeLang} 
+                selectedMenu={selectedMenu} 
+                setSelectedMenu={setSelectedMenu} 
+            />
         </>
     );
 };

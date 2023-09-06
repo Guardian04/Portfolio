@@ -5,5 +5,12 @@
         "portfolio": "投资组合",
         "hobbies": "嗜好",
         "contact": "联系"
+    },
+    "speakLangs": {
+        "fr": "法国人",
+        "it": "意大利人",
+        "en": "英国人",
+        "es": "西班牙人",
+        "cn": "中国人"
     }
 }

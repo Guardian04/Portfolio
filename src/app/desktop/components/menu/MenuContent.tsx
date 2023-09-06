@@ -18,7 +18,12 @@ export default function MenuContent({ openMenu, onClickMenu, selectedMenu } : Pr
             <div className="menu-items">
                 {menuElements.map((element, index) => {
                     return (
-                        <div key={index}className={`menu-item ${element === selectedMenu ? "active" : ""}`} onClick={() => onClickMenu(element)} style={{transitionDelay: `${0.1 * index}s`}}>
+                        <div 
+                            key={index} 
+                            className={`menu-item ${element === selectedMenu ? "active" : ""}`} 
+                            onClick={() => onClickMenu(element)} 
+                            style={{transitionDelay: `${0.1 * index}s`}}
+                        >
                             <div className="menu-item-inner">
                                 <h3>{element.toUpperCase()}</h3>
                             </div>
