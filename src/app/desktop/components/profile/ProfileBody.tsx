@@ -12,7 +12,12 @@ interface Language {
     Name: string;
     Level: string;
     Percentage: number;
-}
+};
+
+interface Programmation {
+    Name: string;
+    Percentage: number;
+};
 
 export default function ProfileBody() {
     const { t } = useTranslation();
@@ -31,8 +36,8 @@ export default function ProfileBody() {
         },
         {
             Name: t("speakLangs.it"),
-            Level: "C2",
-            Percentage: 100
+            Level: "C1",
+            Percentage: 83
         },
         {
             Name: t("speakLangs.en"),
@@ -48,6 +53,49 @@ export default function ProfileBody() {
             Name: t("speakLangs.cn"),
             Level: "A1",
             Percentage: 17
+        }
+    ];
+
+    const programmations : Programmation[] = [
+        {
+            Name: "HTML",
+            Percentage: 95
+        },
+        {
+            Name: "CSS",
+            Percentage: 90
+        },
+        {
+            Name: "Js",
+            Percentage: 75
+        },
+        {
+            Name: "PHP",
+            Percentage: 15
+        },
+        {
+            Name: "Python",
+            Percentage: 90
+        },
+        {
+            Name: "C",
+            Percentage: 55
+        },
+        {
+            Name: "C++",
+            Percentage: 65
+        },
+        {
+            Name: "C#",
+            Percentage: 25
+        },
+        {
+            Name: "Java",
+            Percentage: 20
+        },
+        {
+            Name: "SQL",
+            Percentage: 10
         }
     ];
 
@@ -74,28 +122,28 @@ export default function ProfileBody() {
                         const easeOutCubic = (t: number) => 1 - Math.pow(1 - t, 3);
 
                         useEffect(() => {
-                        const animationDuration = 3000;
+                            const animationDuration = 3000;
 
-                        const animateCircle = () => {
-                            let start = Date.now();
-                            const end = start + animationDuration;
+                            const animateCircle = () => {
+                                let start = Date.now();
+                                const end = start + animationDuration;
 
-                            function step() {
-                            const now = Date.now();
-                            const percentage = Math.min(1, (now - start) / animationDuration);
-                            const easedPercentage = easeOutCubic(percentage); // Appliquer une fonction d'interpolation (easeOutCubic dans cet exemple)
-                            const currentOffset = circumference - easedPercentage * (circumference - progress);
-                            setOffset(currentOffset);
+                                function step() {
+                                const now = Date.now();
+                                const percentage = Math.min(1, (now - start) / animationDuration);
+                                const easedPercentage = easeOutCubic(percentage);
+                                const currentProgress = circumference - easedPercentage * (circumference - progress);
+                                setOffset(currentProgress);
 
-                            if (now < end) {
+                                if (now < end) {
+                                    requestAnimationFrame(step);
+                                }
+                                }
+
                                 requestAnimationFrame(step);
-                            }
-                            }
+                            };
 
-                            requestAnimationFrame(step);
-                        };
-
-                        animateCircle();
+                            animateCircle();
                         }, [circumference, progress]);
 
                         return (
@@ -120,8 +168,7 @@ export default function ProfileBody() {
                                         strokeDashoffset={offset}
                                         strokeLinecap="round"
                                         transform={`rotate(-90 35 35)`}
-                                    >
-                                    </circle>
+                                    />
                                     <text 
                                         x="50%" 
                                         y="50%" 
@@ -134,6 +181,34 @@ export default function ProfileBody() {
                                     </text>
                                 </svg>
                                 <span>{lang.Name}</span>
+                            </div>
+                        );
+                    })}
+                </div>
+                <div className="profile-body-progra">
+                    {programmations.map((prog, index) => {
+                        const progressBar = document.getElementById(`${prog.Name}-progress-bar`);
+                        const offset = progressBar ? progressBar.offsetWidth : 0;
+                        const progress = Math.floor(100 * offset / 230);
+                        const [animationend, setAnimationEnd] = useState(false);
+                        
+                        if (progressBar) {
+                            progressBar.addEventListener("animationend", () => {
+                                setAnimationEnd(true);
+                            });
+                        }
+
+                        return (
+                            <div key={prog.Name} className="profile-body-progra-item">
+                                <div className="progra-container">
+                                    <span>{prog.Name}</span>
+                                    <span>{animationend ? prog.Percentage : progress} %</span>
+                                </div>
+                                <div className="progress-bar-container">
+                                    <div className="bar" style={{width: `${prog.Percentage}%`}}>
+                                        <div className="progress-bar" id={`${prog.Name}-progress-bar`} style={{animationDelay: `${index * 0.2}s`}}></div>
+                                    </div>
+                                </div>
                             </div>
                         );
                     })}
