@@ -39,7 +39,7 @@ export default function MenuFooter({ openMenu, onClickHamburger, currentLanguage
 
     return (
         <div className="menu-footer">
-            <div className={`btn-more-lang ${openMenu ? "sub" : ""}`} onClick={() => onClickHamburger()}>
+            <div className={`menu-btn-more-lang ${openMenu ? "sub" : ""}`} onClick={() => onClickHamburger()}>
                 <span></span>
                 <span></span>
             </div>

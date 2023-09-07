@@ -8,7 +8,7 @@
     align-items: center;
 }
 
-.btn-more-lang {
+.menu-btn-more-lang {
     position: absolute;
     top: 0;
     right: 0;
@@ -22,15 +22,15 @@
     transition: filter 0.5s ease-in-out;
 }
 
-.btn-more-lang.sub {
+.menu-btn-more-lang.sub {
     filter: brightness(100%);
 }
 
-.btn-more-lang:hover {
+.menu-btn-more-lang:hover {
     filter: brightness(100%);
 }
 
-.btn-more-lang span {
+.menu-btn-more-lang span {
     position: absolute;
     width: 10px;
     height: 2px;
@@ -40,35 +40,35 @@
     transition: background-color 0.5s ease-in-out, transform 0.5s ease-in-out;
 }
 
-.btn-more-lang.sub span {
+.menu-btn-more-lang.sub span {
     background-color: #FFA500;
 }
 
-.btn-more-lang span:nth-child(2) {
+.menu-btn-more-lang span:nth-child(2) {
     transform: rotate(90deg);
 }
 
-.btn-more-lang:hover span:nth-child(1) {
+.menu-btn-more-lang:hover span:nth-child(1) {
     transform: rotate(-90deg);
 }
 
-.btn-more-lang:hover span:nth-child(2) {
+.menu-btn-more-lang:hover span:nth-child(2) {
     transform: rotate(0deg);
 }
 
-.btn-more-lang.sub span:nth-child(2) {
+.menu-btn-more-lang.sub span:nth-child(2) {
     transform: rotate(0deg);
 }
 
-.btn-more-lang.sub:hover span{
+.menu-btn-more-lang.sub:hover span{
     background-color: #ff5d5d;
 }
 
-.btn-more-lang.sub:hover span:nth-child(1) {
+.menu-btn-more-lang.sub:hover span:nth-child(1) {
     transform: rotate(45deg);
 }
 
-.btn-more-lang.sub:hover span:nth-child(2) {
+.menu-btn-more-lang.sub:hover span:nth-child(2) {
     transform: rotate(135deg);
 }
 

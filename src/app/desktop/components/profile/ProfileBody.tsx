@@ -21,6 +21,8 @@ interface Programmation {
 
 export default function ProfileBody() {
     const { t } = useTranslation();
+    const [moreLanguages, setMoreLanguages] = useState(false);
+    const [moreProgLanguages, setMoreProgLanguages] = useState(false);
 
     const aboutMe : About = {
         Country: "France",
@@ -59,31 +61,27 @@ export default function ProfileBody() {
     const programmations : Programmation[] = [
         {
             Name: "HTML",
-            Percentage: 95
+            Percentage: 90
         },
         {
             Name: "CSS",
-            Percentage: 90
+            Percentage: 85
+        },
+        {
+            Name: "Python",
+            Percentage: 80
         },
         {
             Name: "Js",
             Percentage: 75
         },
         {
-            Name: "PHP",
-            Percentage: 15
-        },
-        {
-            Name: "Python",
-            Percentage: 90
+            Name: "C++",
+            Percentage: 65
         },
         {
             Name: "C",
             Percentage: 55
-        },
-        {
-            Name: "C++",
-            Percentage: 65
         },
         {
             Name: "C#",
@@ -94,10 +92,22 @@ export default function ProfileBody() {
             Percentage: 20
         },
         {
+            Name: "PHP",
+            Percentage: 15
+        },
+        {
             Name: "SQL",
             Percentage: 10
         }
     ];
+
+    const onClickMoreLang = () => {
+        setMoreLanguages(!moreLanguages);
+    };
+
+    const onClickMoreProgLang = () => {
+        setMoreProgLanguages(!moreProgLanguages);
+    };
 
     return (
         <div className="profile-body">
@@ -112,8 +122,12 @@ export default function ProfileBody() {
                         );
                     })}
                 </div>
-                <div className="profile-body-speak">
-                    {languages.map((lang) => {
+                <div className={`profile-body-speak ${moreLanguages ? "active" : ""}`}>
+                    <div className={`profile-btn-more-lang ${moreLanguages ? "sub" : ""}`} onClick={() => onClickMoreLang()}>
+                        <span></span>
+                        <span></span>
+                    </div>
+                    {languages.map((lang, index) => {
                         const radius = 25;
                         const circumference = 2 * Math.PI * radius;
                         const progress = ((100 - lang.Percentage) / 100) * circumference;
@@ -146,8 +160,10 @@ export default function ProfileBody() {
                             animateCircle();
                         }, [circumference, progress]);
 
+                        const condition = moreLanguages ? languages.length : 3;
+
                         return (
-                            <div key={lang.Name} className="profile-body-speak-item">
+                            <div key={lang.Name} id={`${index >= 3 ? "profile-body-speak-item-down" : ""}`} className={`profile-body-speak-item ${index < condition ? "active" : "" }`}>
                                 <svg width="70" height="70">
                                     <circle
                                         cx="35"
@@ -185,7 +201,11 @@ export default function ProfileBody() {
                         );
                     })}
                 </div>
-                <div className="profile-body-progra">
+                <div className={`profile-body-progra ${moreProgLanguages ? "active" : ""}`}>
+                    <div className={`profile-btn-more-lang ${moreProgLanguages ? "sub" : ""}`} onClick={() => onClickMoreProgLang()}>
+                        <span></span>
+                        <span></span>
+                    </div>
                     {programmations.map((prog, index) => {
                         const progressBar = document.getElementById(`${prog.Name}-progress-bar`);
                         const offset = progressBar ? progressBar.offsetWidth : 0;
@@ -197,9 +217,11 @@ export default function ProfileBody() {
                                 setAnimationEnd(true);
                             });
                         }
-
+                        
+                        const condition = moreProgLanguages ? programmations.length : 5;
+                        
                         return (
-                            <div key={prog.Name} className="profile-body-progra-item">
+                            <div key={prog.Name} className={`profile-body-progra-item ${index < condition ? "active" : "" }`}>
                                 <div className="progra-container">
                                     <span>{prog.Name}</span>
                                     <span>{animationend ? prog.Percentage : progress} %</span>
@@ -212,6 +234,9 @@ export default function ProfileBody() {
                             </div>
                         );
                     })}
+                </div>
+                <div className="profile-body-skills">
+                    
                 </div>
             </div>
         </div>
