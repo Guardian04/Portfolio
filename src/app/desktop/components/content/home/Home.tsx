@@ -12,6 +12,7 @@ export default function Home({ openMenu }: Props) {
             <div className="home-container">
                 <div className="home-content">
                     <div className="home-head">
+                        <img src="images/Me.png" alt="profile" />
                         <h1>{t("sloganHome")}</h1>
                     </div>
                 </div>
