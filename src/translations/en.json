@@ -12,5 +12,12 @@
         "en": "English",
         "es": "Spanish",
         "cn": "Chinese"
+    },
+    "softSkills": {
+        "skill1": "Autonomy",
+        "skill2": "Ability to adapt",
+        "skill3": "Solving complex problems",
+        "skill4": "Team spirit",
+        "skill5": "Critical thinking"
     }
 }
