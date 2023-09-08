@@ -229,10 +229,48 @@
 
 .soft-skill svg {
     fill: #FFA500;
-    --darkreader-inline-fill: #FFA500;
 }
 
 .soft-skill span {
     font-size: 0.75rem;
     font-weight: 500;
+}
+
+.profile-body-download {
+    width: 100%;
+    padding: 10px 0;
+}
+
+.profile-body-download-btn {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.profile-body-download-btn span {
+    font-size: 0.75rem;
+    font-weight: 500;
+    margin-right: 0.3rem;
+    color: white;
+    cursor: pointer;
+    transition: color 0.5s ease-in-out;
+}
+
+.profile-body-download-btn:hover span {
+    color: #FFA500;
+}
+
+.profile-body-download-btn svg {
+    fill: white;
+    transform: scale(0.65);
+    cursor: pointer;
+    transition: fill 0.5s ease-in-out;
+}
+
+.profile-body-download-btn:hover svg {
+    fill: #FFA500;
+}
+
+.profile-body-download-btn svg path {
+    cursor: pointer;
 }

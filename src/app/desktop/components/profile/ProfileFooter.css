@@ -39,6 +39,11 @@
 .profile-footer-item a svg {
     cursor: pointer;
     fill: white;
+    transition: fill 0.5s ease-in-out;
+}
+
+.profile-footer-item:hover a svg {
+    fill: #FFA500;
 }
 
 .profile-footer-item a svg path {
