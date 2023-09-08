@@ -1,3 +1,4 @@
+import { useTranslation } from 'react-i18next';
 import "./ProfileHead.css"
 
 interface Props {
@@ -5,6 +6,7 @@ interface Props {
 };
 
 export default function ProfileHead({ onClick } : Props) {
+    const { t } = useTranslation();
     return (
         <div className="profile-head">
             <div className="profile-head-img">
@@ -17,7 +19,7 @@ export default function ProfileHead({ onClick } : Props) {
                 <h2>Claudio Reibaud</h2>
             </div>
             <div className="profile-job">
-                <h3>Cybersecurity Student</h3>
+                <h3>{t("status")}</h3>
             </div>
         </div>
     );

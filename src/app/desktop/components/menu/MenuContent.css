@@ -4,17 +4,13 @@
     display: flex;
     flex-direction: column;
     overflow: hidden;
-}
-
-.menu-content.active {
     justify-content: center;
     align-items: center;
 }
 
 .menu-items {
-    position: absolute;
-    top: 22%;
-    left: 0;
+    position: relative;
+    top: -7%;
     margin-top: 70px;
     padding-left: 40px;
     width: 150px;
