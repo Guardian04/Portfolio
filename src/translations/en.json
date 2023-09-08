@@ -6,6 +6,16 @@
         "hobbies": "Hobbies",
         "contact": "Contact"
     },
+    "about": {
+        "Country": "Country",
+        "City": "City",
+        "Age": "Age"
+    },
+    "aboutValues": {
+        "Country": "France",
+        "City": "Lyon",
+        "Age": "19"
+    },
     "speakLangs": {
         "fr": "French",
         "it": "Italian",
@@ -20,5 +30,6 @@
         "skill4": "Team spirit",
         "skill5": "Critical thinking"
     },
-    "download": "Download"
+    "download": "Download CV",
+    "sloganHome": "Welcome to my Website"
 }

@@ -6,6 +6,16 @@
         "hobbies": "Hobbies",
         "contact": "Contatto"
     },
+    "about": {
+        "Country": "Paese",
+        "City": "Città",
+        "Age": "Età"
+    },
+    "aboutValues": {
+        "Country": "Francia",
+        "City": "Lione",
+        "Age": "19"
+    },
     "speakLangs": {
         "fr": "Francese",
         "it": "Italiano",
@@ -20,5 +30,6 @@
         "skill4": "Spirito di squadra",
         "skill5": "Pensiero critico"
     },
-    "download": "Scarica"
+    "download": "Scarica CV",
+    "sloganHome": "Benvenuti sul mio sito web"
 }

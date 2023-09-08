@@ -1,3 +1,4 @@
+import { useTranslation } from 'react-i18next';
 import "./Home.css";
 
 interface Props {
@@ -5,10 +6,15 @@ interface Props {
 }
 
 export default function Home({ openMenu }: Props) {
+    const { t } = useTranslation();
     return (
         <section className={`home ${openMenu ? "active" : ""}`} id="home">
             <div className="home-container">
-                <h1>Home</h1>
+                <div className="home-content">
+                    <div className="home-head">
+                        <h1>{t("sloganHome")}</h1>
+                    </div>
+                </div>
             </div>  
         </section>
     );

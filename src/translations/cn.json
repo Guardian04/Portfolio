@@ -6,6 +6,16 @@
         "hobbies": "嗜好",
         "contact": "联系"
     },
+    "about": {
+        "Country": "国家",
+        "City": "城市",
+        "Age": "年龄"
+    },
+    "aboutValues": {
+        "Country": "法国",
+        "City": "里昂",
+        "Age": "19"
+    },
     "speakLangs": {
         "fr": "法国人",
         "it": "意大利人",
@@ -20,5 +30,6 @@
         "skill4": "团队精神",
         "skill5": "批判性思维"
     },
-    "download": "下载"
+    "download": "下载简历",
+    "sloganHome": "欢迎访问我的网站"
 }
