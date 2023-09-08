@@ -151,14 +151,14 @@
 
 .profile-body-progra {
     position: relative;
-    height: 202px;
+    height: 205px;
     padding: 20px 0;
     overflow: hidden;
     transition: height 1s ease-in-out;
 }
 
 .profile-body-progra.active {
-    height: 363px;
+    height: 370px;
 }
 
 .profile-body-progra-item {
@@ -188,7 +188,7 @@
 }
 
 .progress-bar-container {
-    margin-top: 3px;
+    margin-top: 5px;
     width: 100%;
     height: 4px;
     border-radius: 4px;
