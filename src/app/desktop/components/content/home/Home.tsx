@@ -27,11 +27,11 @@ export default function Home({ actualMenu }: Props) {
     }, [actualMenu]);
 
     return (
-        <div className={`home-content ${menuSelected ? "active" : ""}`} id="home-content" style={{display: contentStyle}}>
+        <section className={`home-content ${menuSelected ? "active" : ""}`} id="home-content" style={{display: contentStyle}}>
             <div className="home-head">
                 <img src="images/Me.png" alt="profile" />
                 <h1>{t("sloganHome")}</h1>
             </div>
-        </div>
+        </section>
     );
 };
