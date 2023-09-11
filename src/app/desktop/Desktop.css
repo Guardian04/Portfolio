@@ -18,3 +18,37 @@
     display: flex;
     justify-content: space-between;
 }
+
+.main-container {
+    position: relative;
+    top: 0;
+    left: 290px;
+    width: calc(100% - 290px - 70px);
+    height: 100%;
+    transition: filter 1s ease-in-out, transform 1s ease-in-out;
+}
+
+.main-container.active {
+    transform: translateX(-140px);
+    filter: brightness(75%);
+}
+
+.main-content {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-image: url("images/BG_Rugby.jpg");
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.main-content::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(16, 34, 46, 0.9);
+}
